@@ -7,7 +7,7 @@ import bmatic.ingredient.UnitEspresso;
  */
 public class CaffeAmericano extends Drink {
     public CaffeAmericano() {
-        description = "Cafe Americano";
+        description = "Caffe Americano";
         espresso = 3;
         ingredients.put(new UnitEspresso(), espresso);
     }
