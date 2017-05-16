@@ -9,6 +9,7 @@ import org.junit.Test;
  * Testing functionality of methods and functionality in BaristaMatic.
  */
 public class BaristavilleTest {
+
     @Test
     public void drinkDescriptionTest() {
         assert (new CaffeAmericano().getDescription().contains("Caffe Americano"));

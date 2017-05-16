@@ -10,6 +10,7 @@ import org.junit.Test;
  * Test the BaristaMenu
  */
 public class MenuTest {
+
     @Test
     public void menuTest() {
         String menuOutput = "";
