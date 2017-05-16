@@ -24,6 +24,12 @@ public abstract class Drink extends InventoryItems {
         return description;
     }
 
+    /**
+     * The concrete class sets the ingredients
+     * The getCost method iterates through the ingredients and then
+     * iterates the number of units accumulating the cost from the drink object.
+     * @return cost of drink
+     */
     public double getCost() {
         double cost = 0;
         for (Map.Entry<Ingredient, Integer> entry : ingredients.entrySet()) {

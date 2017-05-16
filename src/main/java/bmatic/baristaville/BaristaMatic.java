@@ -139,9 +139,7 @@ public class BaristaMatic implements Barista {
     }
 
     /**
-     * Since we're using the Drink interface, we will update all
-     * ingredients in the inventory list. The drink will be zero for
-     * all ingredients except those defined in the implemented drink
+     * Use the inventory update stock method to update inventory.
      *
      * @param drink to get ingredients to update.
      */

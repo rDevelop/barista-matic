@@ -68,7 +68,7 @@ public class Inventory extends InventoryItems {
 
 
     /**
-     * Since we're using the Drink interface, we will update all
+     * Since we're using the Drink abstract class, we will update all
      * ingredients in the inventory list. The drink will be zero for
      * all ingredients except those defined in the implemented drink
      *
@@ -87,7 +87,7 @@ public class Inventory extends InventoryItems {
     }
 
     /**
-     * By using Drink interface we don't need to worry about which specific drink
+     * By using Drink abstract class we don't need to worry about which specific drink
      * we're looking for. We'll just check each ingredient in the inventory to the
      * drink's number of ingredients needed to make that drink.
      * All drink values will be zero except for those defined in the implemented drink.
