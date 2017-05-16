@@ -11,7 +11,7 @@ import org.junit.Test;
 public class BaristavilleTest {
     @Test
     public void drinkDescriptionTest() {
-        assert (new CaffeAmericano().getDescription().contains("Cafe Americano"));
+        assert (new CaffeAmericano().getDescription().contains("Caffe Americano"));
         assert (new CaffeLatte().getDescription().contains("Caffe Latte"));
         assert (new CaffeMocha().getDescription().contains("Caffe Mocha"));
         assert (new Cappuccino().getDescription().contains("Cappuccino"));

@@ -19,7 +19,7 @@ public class MenuTest {
             menuOutput += menuItem;
         }
         // contains
-        assert (menuOutput.contains("1,Cafe Americano,$3.30"));
+        assert (menuOutput.contains("1,Caffe Americano,$3.30"));
         assert (menuOutput.contains("2,Caffe Latte,$2.55"));
         assert (menuOutput.contains("3,Caffe Mocha,$3.35"));
         assert (menuOutput.contains("4,Cappuccino,$2.90"));
