@@ -1,4 +1,5 @@
-To run Barista-Matic, you can build with gradle and run the jar, or just run the included jara
+# barista-matic
+To run Barista-Matic, you can build with gradle and run the jar, or just run the included jar
 
 1. Build and run
 gradle clean build
