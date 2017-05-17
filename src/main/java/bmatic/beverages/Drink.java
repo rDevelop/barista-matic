@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Abstract class that all drinks will be inherited by all drinks.
- * The only thing a drink will need to define is the description and ingredients.
+ * Abstract class that will be inherited by all drinks.
+ * The only thing a concrete drink will need to define is the description and ingredients.
  * All drinks will use the same methods to get description, cost, and output
  */
 public abstract class Drink extends InventoryItems {
