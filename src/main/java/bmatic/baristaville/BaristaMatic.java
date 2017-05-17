@@ -13,9 +13,6 @@ import java.util.Scanner;
  * Implementation of the Barista contract.
  */
 public class BaristaMatic implements Barista {
-    final static int INVALID = -100;
-    final static int RESTOCK = -200;
-    final static int QUIT = -300;
 
     private Inventory inventory;
     private BaristaMenu menu;
@@ -39,7 +36,7 @@ public class BaristaMatic implements Barista {
             showInventoryList();
             showMenu();
             int order = getOrder();
-            if (order != QUIT && order != INVALID && order != RESTOCK) {
+            if (order != -1) {
                 Drink drink = menu.getItem(order).getDrink();
                 if (isStocked(drink)) {
                     dispenseDrink(drink);
@@ -77,7 +74,7 @@ public class BaristaMatic implements Barista {
     /**
      * Scan's the console input for commands and item number of menu items.
      *
-     * @return integer representing 'q', 'r', or item number.
+     * @return integer -1 or item number.
      */
     @Override
     public int getOrder() {
@@ -90,11 +87,11 @@ public class BaristaMatic implements Barista {
             }
             if ("r".equalsIgnoreCase(in)) {
                 inventory.restock();
-                return RESTOCK;
+                return -1;
 
             } else if ("q".equalsIgnoreCase(in)) {
                 running = false;
-                return QUIT;
+                return -1;
 
             } else {
                 int choice;
@@ -103,7 +100,7 @@ public class BaristaMatic implements Barista {
                     choice = Integer.valueOf(in);
                 } catch (NumberFormatException e) {
                     printInvalidSelection(String.valueOf(in));
-                    return INVALID;
+                    return -1;
                 }
 
                 if (choice > 0 && choice <= menu.getNumItems()) {
@@ -113,14 +110,14 @@ public class BaristaMatic implements Barista {
                     return choice;
                 }
                 printInvalidSelection(String.valueOf(choice));
-                return INVALID;
+                return -1;
             }
         }
-        return INVALID;
+        return -1;
     }
 
     /**
-     * If input is not 'q', 'r', or valid item number, print invalid message.
+     * If input is not -1 or valid item number, print invalid message.
      *
      * @param selection aka invalid input from console
      */
