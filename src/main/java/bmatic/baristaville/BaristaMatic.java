@@ -17,16 +17,16 @@ public class BaristaMatic implements Barista {
     final static int RESTOCK = -200;
     final static int QUIT = -300;
 
-    private Scanner scanner = new Scanner(System.in);
-    private BaristaMenu menu;
     private Inventory inventory;
+    private BaristaMenu menu;
+    private Scanner scanner;
     private boolean running;
 
     public BaristaMatic() {
+        scanner = new Scanner(System.in);
         inventory = new Inventory();
-        running = true;
         menu = new BaristaMenu();
-
+        running = true;
     }
 
     /**
