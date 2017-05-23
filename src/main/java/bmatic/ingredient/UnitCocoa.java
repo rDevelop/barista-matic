@@ -5,6 +5,12 @@ package bmatic.ingredient;
  */
 public class UnitCocoa extends Ingredient {
     public UnitCocoa() {
-        cost = .9;
+        setCost(.9);
     }
+
+    public UnitCocoa(double cost) {
+        setCost(cost);
+    }
+
+
 }

@@ -22,7 +22,7 @@ public class BaristaMatic implements Barista {
     public BaristaMatic() {
         scanner = new Scanner(System.in);
         inventory = new Inventory();
-        menu = new BaristaMenu();
+        menu = new BaristaMenu().defaultMenu();
         running = true;
     }
 

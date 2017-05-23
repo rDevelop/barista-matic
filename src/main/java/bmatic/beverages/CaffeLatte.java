@@ -1,17 +1,24 @@
 package bmatic.beverages;
 
+import bmatic.ingredient.Ingredient;
 import bmatic.ingredient.UnitEspresso;
 import bmatic.ingredient.UnitSteamedMilk;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A Specific drink and it's description and ingredient list.
  */
 public class CaffeLatte extends Drink {
     public CaffeLatte() {
-        description = "Caffe Latte";
-        espresso = 2;
-        steamedMilk = 1;
-        ingredients.put(new UnitEspresso(), espresso);
-        ingredients.put(new UnitSteamedMilk(), steamedMilk);
+        setDescription("Caffe Latte");
+        Map<Ingredient, Integer> ingredients = new HashMap<>();
+        setEspresso(2);
+        setSteamedMilk(1);
+        ingredients.put(new UnitEspresso(), getEspresso());
+        ingredients.put(new UnitSteamedMilk(), getSteamedMilk());
+        setIngredients(ingredients);
+
     }
 }

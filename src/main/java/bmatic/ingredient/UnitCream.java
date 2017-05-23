@@ -5,6 +5,10 @@ package bmatic.ingredient;
  */
 public class UnitCream extends Ingredient {
     public UnitCream() {
-        cost = .25;
+        setCost(.25);
+    }
+
+    public UnitCream(double cost) {
+        setCost(cost);
     }
 }

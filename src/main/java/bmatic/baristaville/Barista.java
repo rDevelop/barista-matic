@@ -19,5 +19,4 @@ public interface Barista {
     void updateInventory(Drink drink);
 
     boolean isStocked(Drink drink);
-
 }

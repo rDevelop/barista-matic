@@ -30,43 +30,6 @@ public class Inventory extends InventoryItems {
         setDefaultInventory();
     }
 
-    public void setCocoa(int cocoa) {
-        this.cocoa = cocoa;
-    }
-
-    public void setCoffee(int coffee) {
-        this.coffee = coffee;
-    }
-
-    public void setCream(int cream) {
-        this.cream = cream;
-    }
-
-    public void setDecafCoffee(int decafCoffee) {
-        this.decafCoffee = decafCoffee;
-    }
-
-    public void setEspresso(int espresso) {
-        this.espresso = espresso;
-    }
-
-    public void setFoamedMilk(int foamedMilk) {
-        this.foamedMilk = foamedMilk;
-    }
-
-    public void setSteamedMilk(int steamedMilk) {
-        this.steamedMilk = steamedMilk;
-    }
-
-    public void setSugar(int sugar) {
-        this.sugar = sugar;
-    }
-
-    public void setWhippedCream(int whippedCream) {
-        this.whippedCream = whippedCream;
-    }
-
-
     /**
      * Since we're using the Drink abstract class, we will update all
      * ingredients in the inventory list. The drink will be zero for
@@ -133,15 +96,15 @@ public class Inventory extends InventoryItems {
      */
     public String inventoryList() {
         StringBuilder buffer = new StringBuilder("Inventory:\n");
-        buffer.append("Cocoa," + cocoa + "\n");
-        buffer.append("Coffee," + coffee + "\n");
-        buffer.append("Cream," + cream + "\n");
-        buffer.append("Decaf Coffee," + decafCoffee + "\n");
-        buffer.append("Espresso," + espresso + "\n");
-        buffer.append("Foamed Milk," + foamedMilk + "\n");
-        buffer.append("Steamed Milk," + steamedMilk + "\n");
-        buffer.append("Sugar," + sugar + "\n");
-        buffer.append("Whipped Cream," + whippedCream);
+        buffer.append("Cocoa," + getCocoa() + "\n");
+        buffer.append("Coffee," + getCoffee() + "\n");
+        buffer.append("Cream," + getCream() + "\n");
+        buffer.append("Decaf Coffee," + getDecafCoffee() + "\n");
+        buffer.append("Espresso," + getEspresso() + "\n");
+        buffer.append("Foamed Milk," + getFoamedMilk() + "\n");
+        buffer.append("Steamed Milk," + getSteamedMilk() + "\n");
+        buffer.append("Sugar," + getSugar() + "\n");
+        buffer.append("Whipped Cream," + getWhippedCream());
         return buffer.toString();
     }
 }

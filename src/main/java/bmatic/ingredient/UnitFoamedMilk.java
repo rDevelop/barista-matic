@@ -5,6 +5,11 @@ package bmatic.ingredient;
  */
 public class UnitFoamedMilk extends Ingredient {
     public UnitFoamedMilk() {
-        cost = .35;
+
+        setCost(.35);
+    }
+
+    public UnitFoamedMilk(double cost) {
+        setCost(cost);
     }
 }

@@ -1,6 +1,7 @@
 package bmatic;
 
 import bmatic.beverages.Cappuccino;
+import bmatic.beverages.DecafCoffee;
 import bmatic.beverages.Drink;
 import bmatic.menu.BaristaMenu;
 import bmatic.menu.MenuItem;
@@ -14,7 +15,7 @@ public class MenuTest {
     @Test
     public void menuTest() {
         String menuOutput = "";
-        BaristaMenu menu = new BaristaMenu();
+        BaristaMenu menu = new BaristaMenu().defaultMenu();
         for (Object item : menu.getItems()) {
             MenuItem menuItem = (MenuItem) item;
             menuOutput += menuItem;
@@ -32,10 +33,23 @@ public class MenuTest {
 
     @Test
     public void getDrinkTest() {
-        BaristaMenu menu = new BaristaMenu();
+        BaristaMenu menu = new BaristaMenu().defaultMenu();
         Drink drink = menu.getItem(4).getDrink();
         assert (drink instanceof Cappuccino);
         assert (drink.toString().contains("Cappuccino"));
+    }
+
+    @Test
+    public void addMenuItem() {
+        BaristaMenu menu = new BaristaMenu();//.defaultMenu();
+        menu.addMenuItem(7, new Cappuccino());
+        menu.addMenuItem(4, new DecafCoffee());
+        menu.getItems().forEach(
+                item -> {
+                    MenuItem menuItem = (MenuItem) item;
+                    System.out.println(menuItem);
+                }
+        );
     }
 
 }

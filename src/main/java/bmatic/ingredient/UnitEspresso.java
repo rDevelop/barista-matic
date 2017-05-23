@@ -5,6 +5,10 @@ package bmatic.ingredient;
  */
 public class UnitEspresso extends Ingredient {
     public UnitEspresso() {
-        cost = 1.1;
+        setCost(1.1);
+    }
+
+    public UnitEspresso(double cost) {
+        setCost(cost);
     }
 }

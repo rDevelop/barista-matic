@@ -12,10 +12,10 @@ import java.util.Map;
  * All drinks will use the same methods to get description, cost, and output
  */
 public abstract class Drink extends InventoryItems {
-    public Map<Ingredient, Integer> ingredients;
-    public String description;
+    private Map<Ingredient, Integer> ingredients;
+    private String description;
 
-    protected Drink() {
+    Drink() {
         ingredients = new HashMap<>();
         description = "Plain drink";
     }
@@ -24,13 +24,27 @@ public abstract class Drink extends InventoryItems {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Map<Ingredient, Integer> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(Map<Ingredient, Integer> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+
     /**
      * The concrete class sets the ingredients
      * The getCost method iterates through the ingredients and then
      * iterates the number of units accumulating the cost from the drink object.
+     *
      * @return cost of drink
      */
-    public double getCost() {
+    protected double getCost() {
         double cost = 0;
         for (Map.Entry<Ingredient, Integer> entry : ingredients.entrySet()) {
             for (int i = 0; i < entry.getValue(); i++) {
