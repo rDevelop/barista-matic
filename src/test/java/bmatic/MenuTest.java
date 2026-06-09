@@ -41,15 +41,11 @@ public class MenuTest {
 
     @Test
     public void addMenuItem() {
-        BaristaMenu menu = new BaristaMenu();//.defaultMenu();
-        menu.addMenuItem(7, new Cappuccino());
+        BaristaMenu menu = new BaristaMenu().defaultMenu();
+
         menu.addMenuItem(4, new DecafCoffee());
-        menu.getItems().forEach(
-                item -> {
-                    MenuItem menuItem = (MenuItem) item;
-                    System.out.println(menuItem);
-                }
-        );
+
+        assert(menu.getItem(4).getDrink() instanceof DecafCoffee);
     }
 
 }
