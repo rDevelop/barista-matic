@@ -35,6 +35,7 @@ public class BaristaMatic implements Barista {
         while (running) {
             showInventoryList();
             showMenu();
+            System.out.print("Select drink 1-6, r to restock, q to quit: ");
             int order = getOrder();
             if (order != -1) {
                 Drink drink = menu.getItem(order).getDrink();
